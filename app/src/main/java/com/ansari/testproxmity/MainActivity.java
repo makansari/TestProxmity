@@ -9,6 +9,9 @@ import android.hardware.SensorManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -84,6 +87,15 @@ private static String TAG = MainActivity.class.getSimpleName();
                 // App code
             }
         });
+    }
+
+    public void clickListener(View view) {
+        EditText nameEditText = findViewById(R.id.editText);
+        String name =  nameEditText.getText().toString();
+
+        TextView resTextView =  findViewById(R.id.resultTextview);
+        resTextView.setText(name);
+
     }
 }
 
